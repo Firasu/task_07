@@ -5,6 +5,11 @@
         <title>Update</title>
     </head>
     <body>
-
+    	
+    	<form action="{%url 'restaurant-update' obj_id %}" method="POST">
+    		{% csrf_token %}
+    		{{form.as_p}}
+    		<input type="Submit" value="Update">
+    	</form>	
     </body>
 </html>
